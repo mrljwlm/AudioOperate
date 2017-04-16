@@ -15,5 +15,7 @@
 extern "C" AUDIO_API BOOL ReadWavFile(char* filePath, char* wavbuf, int& wavlen);
 //将buff内存写到指定的路径下
 extern "C" AUDIO_API BOOL WriteWavFile(char* filePath, char* wavbuf, int wavlen);
+//从buff内存读取采样数据
+extern "C" AUDIO_API BOOL GetSampleData(float* fsampleData,char* wavbuf, int wavlen);
 //释放dll中分配的内存
 extern "C" AUDIO_API void FreeMemory(char* wavbuf);
